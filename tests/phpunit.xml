@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<phpunit 
+    bootstrap="./bootstrap.php"
+    colors="true"
+    backupGlobals="false"
+    verbose="true"
+    convertErrorsToExceptions="false"
+    convertNoticesToExceptions="false"
+    convertWarningsToExceptions="false"
+    stopOnError="true">
+        
+    <testsuites>
+
+        <testsuite name="Phipe Testing">
+            <directory>library/Phipe</directory>
+        </testsuite>
+
+    </testsuites>
+
+    <filter>
+
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../library</directory>
+            <exclude>
+                <directory suffix=".php">../public</directory>
+                <directory suffix=".php">../tests</directory>
+            </exclude>
+        </whitelist>
+
+    </filter>
+
+</phpunit>
